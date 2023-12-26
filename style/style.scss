@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #E3F2FD;
+    .wrapper {
+        width: 65vmin;
+        height: 70vmin;
+        display: flex;
+        overflow: hidden;
+        flex-direction: column;
+        border-radius: 6px;
+        background: #293447;
+        .game-info {
+            color: #B8C6DC;
+            font-size: 20px;
+            font-weight: 500;
+            padding: 20px 27px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .play-area {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+            background: #212837;
+            .food {
+                background: red;
+            }
+            .head {
+                background: #60CBFF;
+            }
+        }
+        .controls {
+            display: none;
+            justify-content: space-between;
+            i {
+                padding: 25px 0;
+                color: #B8C6DC;
+                text-align: center;
+                cursor: pointer;
+                font-size: 20px;
+                width: 25%;
+                border-right: 1px solid #171b26;
+            }
+        }
+    }
+    @media screen and (max-width: 800px) {
+        .wrapper {
+            width: 90vmin;
+            height: 115vmin;
+            .game-info {
+                font-size: 16px;
+                padding: 15px 27px;
+            }
+            .controls {
+                display: flex;
+                i {
+                    padding: 15px 0;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
